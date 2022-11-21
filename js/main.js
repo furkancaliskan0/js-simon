@@ -39,3 +39,16 @@ function randomNumber(min, max){
     return ( Math.floor(Math.random() * ((max + 1) - min) + min));
 }
 
+function arrayRandom(n, minNum, maxNum){
+
+    const numArray = [];
+
+    while (numArray.length < n){
+        let userNum = randomNumber(minNum, maxNum);
+
+        if(!numArray.includes(userNum)){
+            numArray.push(userNum);
+        }
+    }
+    return numArray;
+}
